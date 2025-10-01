@@ -18,5 +18,13 @@ function compteur(a,b){
     return(a + b)
 }
 
+function addTask(name){
+  let done = false;
+  let task = [nextId, name.trim(), done];
+  nextId += 1;
+  tasks.push(task);
+  return task;
+}
 
-module.exports = { compteur, getTasks, reset };
+
+module.exports = { compteur, addTask, getTasks, reset };

@@ -11,3 +11,9 @@ test('initial task list is empty', () => {
 test('add 1 + 2 + 3', ()=> {
     expect(compteur(1,2)).toBe(3);
 })
+
+test('ajoute une tâche valide', () => {
+  reset() ;
+  expect(addTask("test")).toEqual([1, "test", false]);
+  expect(tasks.length).toBe(1);
+});
