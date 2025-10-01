@@ -18,6 +18,7 @@ test('ajoute une tâche valide', () => {
   expect(tasks.length).toBe(1);
 });
 
+
 test('toggleTask change l’état de done', () => {
   addTask("test");
   expect(getTasks()[0]).toEqual({ id: 1, name: "test", done: false });
@@ -28,3 +29,4 @@ test('toggleTask change l’état de done', () => {
   expect(toggleTask(1)).toEqual({ id: 1, name: "test", done: false });
   expect(getTasks()[0].done).toBe(false);
 });
+
