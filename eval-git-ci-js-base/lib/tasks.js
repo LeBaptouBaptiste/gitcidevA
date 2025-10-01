@@ -14,30 +14,22 @@ function reset() {
   nextId = 1;
 }
 
-function compteur(a,b){
-    return(a + b)
-}
-
 function addTask(name){
-  let done = false;
-
-  let task = { id: nextId, name: name.trim(), done: false };
-
-  let task = [nextId, name.trim(), done];
-
-  nextId += 1;
+  let task = { id: nextId++, name: name.trim(), done: false };
   tasks.push(task);
   return task;
 }
 
-
-function toggleTask(id) {
+function toggleTask(id){
   let task = tasks.find(t => t.id === id);
-  task.done = !task.done; 
+  if (task) {
+    task.done = !task.done;
+  }
   return task;
 }
 
-module.exports = { compteur, addTask, toggleTask, getTasks, reset };
+function countDone(){
+  return tasks.filter(t => t.done).length;
+}
 
-
-module.exports = { compteur, addTask, getTasks, reset };
+module.exports = { addTask, toggleTask, getTasks, reset, countDone };
