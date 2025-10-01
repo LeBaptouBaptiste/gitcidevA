@@ -14,4 +14,10 @@ function reset() {
   nextId = 1;
 }
 
-module.exports = { getTasks, reset };
+function addTask(name){
+  let task = { id: nextId++, name: name.trim(), done: false };
+  tasks.push(task);
+  return task;
+}
+
+module.exports = { getTasks, reset, addTask };
