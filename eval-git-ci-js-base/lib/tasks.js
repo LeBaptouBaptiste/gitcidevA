@@ -20,4 +20,12 @@ function addTask(name){
   return task;
 }
 
-module.exports = { getTasks, reset, addTask };
+function toggleTask(id){
+  let task = tasks.find(t => t.id === id);
+  if (task) {
+    task.done = !task.done;
+  }
+  return task;
+}
+
+module.exports = { getTasks, reset, addTask, toggleTask};
