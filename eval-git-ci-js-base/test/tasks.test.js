@@ -1,4 +1,4 @@
-const { getTasks, reset } = require('../lib/tasks');
+const { getTasks, reset, compteur } = require('../lib/tasks');
 
 beforeEach(() => {
   reset();
@@ -7,3 +7,7 @@ beforeEach(() => {
 test('initial task list is empty', () => {
   expect(getTasks()).toEqual([]);
 });
+
+test('add 1 + 2 + 3', ()=> {
+    expect(compteur(1,2)).toBe(3);
+})

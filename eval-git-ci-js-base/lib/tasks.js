@@ -14,4 +14,9 @@ function reset() {
   nextId = 1;
 }
 
-module.exports = { getTasks, reset };
+function compteur(a,b){
+    return(a + b)
+}
+
+
+module.exports = { compteur, getTasks, reset };
