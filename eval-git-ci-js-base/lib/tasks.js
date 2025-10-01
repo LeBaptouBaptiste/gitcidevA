@@ -29,7 +29,7 @@ function toggleTask(id){
 }
 
 function countDone(){
-  return tasks.filter(t => t.done).length + 1;
+  return tasks.filter(t => t.done).length;
 }
 
 module.exports = { getTasks, reset, addTask, toggleTask, countDone};
