@@ -1,4 +1,3 @@
-
 // Simple in-memory task list
 let tasks = [];
 let nextId = 1;
@@ -14,4 +13,9 @@ function reset() {
   nextId = 1;
 }
 
-module.exports = { getTasks, reset };
+function compteur(a,b){
+    return(a + b)
+}
+
+
+module.exports = { compteur, getTasks, reset };
